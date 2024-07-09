@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style/style.css" />
+    <link rel="stylesheet" href="style/responsive.css" />
+    <title>Tugas Akhir</title>
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="main-container">
+        <div class="nav">
+          <div class="logo">
+            <a href="#home">TA.</a>
+          </div>
+
+          <nav>
+            <ul>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </nav>
+
+          <div class="burger">
+            <div class="line-1"></div>
+            <div class="line-2"></div>
+            <div class="line-3"></div>
+          </div>
+        </div>
+        <section id="home">
+          <div class="home-left">
+            <h3 class="pre-title">Hello,Nama Saya</h3>
+            <h1 class="home-name">Zean Ananda Pratama</h1>
+            <p>Project Tugas Akhir Pemrograman Web.</p>
+          </div>
+          <div class="home-right">
+            <img src="./image/sapiens.svg" alt="Person Standing" />
+          </div>
+        </section>
+      </div>
+    </header>
+    <!-- End Header -->
+
+    <!-- About -->
+    <main>
+      <article>
+        <aside>
+          <section id="about">
+            <div class="about main-container">
+              <div class="pre-title">
+                <h3>About Me</h3>
+              </div>
+              <div class="about-content">
+                <div class="sidebar">
+                  <div class="myname">SIDEBAR PROFIL</div>
+                  <img src="./image/foto-profil.jpg" alt="Profile Picture" />
+                  <p>
+                    Saya Zean Ananda Pratama, berasal dari Jawa Barat dan saya sedang berkuliah di Universitas Ahmad Dahlan prodi Informatika.<br />
+                    Ini merupakan project tugas akhir pemrograman web yang telah saya buat.
+                  </p>
+                </div>
+                <div class="content">
+                  <p>
+                    Saya seorang mahasiswa Informatika di Universitas Ahmad Dahlan dengan minat yang kuat dalam pengembangan web dan desain UI/UX, baik untuk keperluan akademis maupun pribadi.<br /><br />
+                    Pendidikan Saya<br />
+                    - Universitas Ahmad Dahlan (2023 - Sekarang)<br />
+                    - SMA Negeri 1 Talaga (2020 - 2023)<br />
+                    - SMP Negeri 1 Cikijing (2016 - 2019)<br />
+                    - SD Negeri 1 Cisoka (2010 - 2016) <br />
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+        </aside>
+        <!-- End About -->
+
+        <!-- Contact -->
+        <section id="contact">
+          <div class="contact main-container">
+            <div class="contact-left">
+              <form action="proses.php" method="POST" class="contact-form">
+                <div>
+                  <input type="text" placeholder="Nama" name="name" required />
+                </div>
+                <div>
+                  <input type="email" placeholder="Email" name="email" required />
+                </div>
+                <div>
+                  <input type="text" placeholder="Telepon" name="phone" required />
+                </div>
+                <div>
+                  <textarea name="kritik" id="kritik" cols="10" rows="5" placeholder="Kritik" required></textarea>
+                </div>
+                <div>
+                  <textarea name="saran" id="saran" cols="10" rows="5" placeholder="Saran" required></textarea>
+                </div>
+                <div>
+                  <button class="btn-submit">Kirim Pesan</button>
+                </div>
+              </form>
+              <br />
+              <p>*anda juga bisa mengirim survey tentang website ini, klik button dibawah ini</p>
+              <form action="php/survey.php" method="POST">
+                <button type="submit" class="btn-submit">Kirim Survey</button>
+              </form>
+            </div>
+            <div class="contact-right">
+              <div class="contact-item">
+                <div class="contact-item-icon">
+                  <img src="./image/Addres.svg" />
+                </div>
+                <div class="contact-item-detail">
+                  <a href="https://maps.app.goo.gl/WupNtKFuGvurT8QG8" target="_blank">
+                    <h4>Alamat</h4>
+                  </a>
+                  <p>Daerah Istimewa Yogyakarta</p>
+                </div>
+              </div>
+              <div class="contact-item">
+                <div class="contact-item-icon">
+                  <img src="./image/Phone.svg" />
+                </div>
+                <div class="contact-item-detail">
+                  <a href="https://wa.me/6288218418906" target="_blank">
+                    <h4>Telepon</h4>
+                  </a>
+                  <p>+62 882 1841 8906</p>
+                </div>
+              </div>
+              <div class="contact-item">
+                <div class="contact-item-icon">
+                  <img src="./image/Email.svg" />
+                </div>
+                <div class="contact-item-detail">
+                  <a href="mailto:2300018312@webmail.uad.ac.id" target="_blank">
+                    <h4>Email</h4>
+                  </a>
+                  <p>2300018312@webmail.uad.ac.id</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- End Contact -->
+      </article>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-icons">
+        <a href="https://www.instagram.com/zeanprtmaa_" target="_blank">
+          <img src="./image/Instagram.svg" />
+        </a>
+        <a href="#">
+          <img src="./image/Gitlab.svg" />
+        </a>
+        <a href="https://github.com/zeanprtmaa" target="_blank">
+          <img src="./image/GitHub.svg" />
+        </a>
+      </div>
+      <p>&#169; 2024 - Dibuat oleh Zee</p>
+    </footer>
+    <!-- End Footer -->
+
+    <script src="js/toggle.js"></script>
+    <script src="js/validasi.js"></script>
+  </body>
+</html>

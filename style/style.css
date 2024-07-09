@@ -1,0 +1,393 @@
+/* Import Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Sen:wght@400..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Sen&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Lato:wght@100;300;400;700;900&family=Sen&display=swap");
+
+:root {
+  --sectionPadding: 6rem 0;
+  --itemBorderRadius: 0.7rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  background-color: #1e1e1e;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.9rem;
+  color: white;
+}
+
+a {
+  text-decoration: none;
+}
+
+.main-container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 1200px) {
+  .main-container {
+    width: 90%;
+  }
+}
+/* End Preparation */
+
+/* Titles */
+.section-title {
+  margin: 1rem 0 4rem;
+  font-size: 2rem;
+  color: white;
+  font-family: "sen", sans-serif;
+}
+
+.section-title span {
+  color: #ff4545;
+}
+
+.pre-title {
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+  color: white;
+  position: relative;
+  padding-left: 40px;
+  width: fit-content;
+  font-weight: 400;
+  font-size: 0.9rem;
+  font-family: "lato", sans-serif;
+}
+
+.pre-title::before {
+  content: "";
+  width: 30px;
+  height: 1px;
+  background: #ff4545;
+  position: absolute;
+  display: block;
+  left: 0;
+  top: 50%;
+}
+
+/* Layouts */
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 3rem;
+}
+
+/* --- Logo and Navigation Menu --- */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 0;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 3rem;
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+.logo a {
+  color: #ff4545;
+  font-family: "sen", sans-serif;
+}
+
+/* Navigation Menu */
+nav ul li {
+  display: flex;
+  align-items: center;
+}
+
+nav ul li a {
+  color: white;
+  font-family: "lato", sans-serif;
+  font-size: 1.3rem;
+  font-weight: 400;
+  padding: 10px 15px;
+  background-color: transparent;
+  border: none;
+  border-radius: 20px;
+  transition: 0.3s ease, transform 0.2s ease;
+}
+
+nav ul li a:hover {
+  color: white;
+  background-color: #ff4545;
+  transform: scale(1.05);
+}
+
+.burger div {
+  width: 25px;
+  height: 2px;
+  background-color: white;
+  margin: 7px;
+  transition: all 0.3s;
+  z-index: 99;
+}
+
+.burger {
+  display: none;
+  z-index: 99;
+  position: fixed;
+  top: 33px;
+  right: 35px;
+  background-color: transparent;
+}
+
+.side-bar {
+  background: #1e1e1e;
+  width: 250px;
+  height: 100vh;
+  left: 0;
+  position: absolute;
+  overflow-y: auto;
+  transition: 0.6s ease-in-out;
+  transition-property: left;
+}
+
+.side-bar img {
+  width: 100px;
+  height: 110px;
+  margin: 15px;
+  margin-left: 70px;
+  border-radius: 50%;
+  border: 3px solid #fff;
+}
+
+.myname {
+  align-items: center;
+  color: white;
+  background-color: #191919;
+  font-family: "sen", sans-serif;
+  font-weight: 700;
+  font-size: 1.4rem;
+  padding-bottom: 20px;
+}
+
+.side-bar p {
+  align-items: center;
+  color: white;
+  font-family: "lato", sans-serif;
+  font-weight: 400;
+}
+
+/* Home Section */
+#home {
+  height: 720px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+
+.home-name {
+  font-size: 3rem;
+  font-weight: 700;
+  margin: 0.5rem 0 1rem;
+  color: #fff;
+  font-family: "sen", sans-serif;
+  font-weight: 800;
+}
+
+.home-right img {
+  width: 90%;
+}
+
+.home-right {
+  display: flex;
+  justify-content: center;
+}
+
+.home-left p {
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 600;
+  font-family: "lato", sans-serif;
+}
+
+.home-left span {
+  color: #ff8a00;
+}
+
+.home-left span:hover {
+  color: #ff4545;
+}
+
+/* About */
+.about {
+  padding: var(--sectionPadding);
+}
+
+.about .pre-title {
+  margin: 2rem auto;
+}
+
+.about-content {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 3rem;
+}
+
+.sidebar {
+  background: #191919;
+  width: 250px;
+  padding: 20px;
+  border-radius: 3%;
+  border: 3px solid #191919;
+  box-shadow: 0 0 5px #ff4545;
+}
+
+.sidebar img {
+  display: block;
+  width: 100px;
+  height: 100px;
+  margin: 15px auto;
+  margin-bottom: 10px auto;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+
+.myname {
+  color: white;
+  font-family: "sen", sans-serif;
+  font-weight: 700;
+  font-size: 1.4rem;
+  text-align: center;
+}
+
+.sidebar p {
+  color: white;
+  font-family: "lato", sans-serif;
+  font-weight: 400;
+  text-align: center;
+}
+
+.content {
+  flex: 1;
+}
+
+.content p {
+  color: white;
+  font-family: "lato", sans-serif;
+  font-size: 1rem;
+}
+
+.content h4 {
+  color: white;
+}
+
+/* Contact Section */
+#contact {
+  padding: var(--sectionPadding);
+}
+
+.contact {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 3rem;
+}
+
+.contact-form div {
+  margin-bottom: 1.4rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  color: white;
+  width: 100%;
+  padding: 0.75rem 1.3rem;
+  font-family: "lato", sans-serif;
+  background: #191919;
+  border: 1px solid lightgray;
+  border-radius: 3px;
+  resize: none;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: grey;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border: 1px solid #ff4545;
+}
+
+.btn-submit {
+  width: 100%;
+  padding: 0.75rem 1.3rem;
+  background-color: #ff4545;
+  color: #ffffff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+
+.btn-submit:hover {
+  background-color: #191919;
+  transform: scale(1.02);
+}
+
+.contact-item {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.contact-item-icon {
+  width: 53px;
+  height: 53px;
+  border-radius: 9px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-item-detail h4 {
+  margin-bottom: 0.6rem;
+  color: white;
+  font-family: "lato", sans-serif;
+  font-weight: 700;
+  font-size: 1.3rem;
+}
+
+.contact-item-detail p {
+  color: white;
+  font-family: "inter", sans-serif;
+  font-weight: 400;
+}
+
+.contact-item-detail h4:hover {
+  color: #ff4545;
+}
+
+/* Footer Section */
+footer {
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.footer-icons {
+  margin-bottom: 1rem;
+}
+
+.footer-icons a {
+  margin: 0 0.5rem;
+}
